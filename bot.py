@@ -9,7 +9,7 @@ token = f.read()
 f.seek(0)
 f.close()
 
-p = ""
+p = "im"
 client = commands.Bot(command_prefix=p)
 
 @client.event
@@ -18,8 +18,8 @@ async def on_ready():
     await client.change_presence(game=discord.Game(name='with my son'))
 
 @client.command
-async def i'm(ctx, arg):
-    client.say('Hi, ' + arg '. I'm Dad!)
+async def  (arg):
+    await client.say('Hi, ' + arg + '. I/m Dad!')
 
 
 client.run(token)
