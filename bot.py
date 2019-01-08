@@ -21,7 +21,7 @@ async def on_ready():
 async def im(ctx, arg):
     test = 'dad'
     if arg.lower() == test:
-     await client.say('No I\'m Dad!')
+     await client.say('No, I\'m Dad!')
     else:
      await client.say('Hi, ' + arg + '. I\'m Dad!')
 
@@ -31,7 +31,7 @@ async def i(ctx, arg1, arg2):
     test = 'dad'
     if arg1.lower() == am:
         if arg2.lower() == test:
-            await client.say('No I\'m Dad!')
+            await client.say('No, I\'m Dad!')
         else:
             await client.say('Hi, ' + arg2 + '. I\'m Dad!')
 
