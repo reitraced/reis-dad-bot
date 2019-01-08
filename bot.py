@@ -9,7 +9,7 @@ token = f.read()
 f.seek(0)
 f.close()
 
-p = "im"
+p = ""
 client = commands.Bot(command_prefix=p)
 
 @client.event
@@ -17,9 +17,13 @@ async def on_ready():
     print('We have logged in as {0.user}'.format(client))
     await client.change_presence(game=discord.Game(name='with my son'))
 
-@client.command
-async def  (arg):
-    await client.say('Hi, ' + arg + '. I/m Dad!')
+@client.command(pass_context=True, invoke_without_command=True)
+async def im(ctx, arg):
+    test = 'dad'
+    if arg.lower() == test:
+     await client.say('No I\'m Dad!')
+    else:
+     await client.say('Hi, ' + arg + '. I\'m Dad!')
 
 
 client.run(token)
