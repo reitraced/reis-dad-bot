@@ -25,5 +25,16 @@ async def im(ctx, arg):
     else:
      await client.say('Hi, ' + arg + '. I\'m Dad!')
 
+@client.command(pass_context=True, invoke_without_command=True)
+async def i(ctx, arg1, arg2):
+    am = 'am'
+    test = 'dad'
+    if arg1.lower() == am:
+        if arg2.lower() == test:
+            await client.say('No I\'m Dad!')
+        else:
+            await client.say('Hi, ' + arg2 + '. I\'m Dad!')
+
+
 
 client.run(token)
